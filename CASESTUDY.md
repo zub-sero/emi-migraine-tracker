@@ -6,26 +6,34 @@ Migraines are one of the most prevalent and debilitating neurological conditions
 I was inspired to build Emi because I have watched my wife suffer from chronic migraines for years. She has had them since childhood and has spent decades learning to manage a condition that, over time, clinical systems often stop actively trying to solve. The gap between what she needed and what existed was clear. The app she needed did not exist, so I built it.
 
 The user
+
 The primary user is a chronic migraine sufferer: someone who experiences migraines frequently enough to suspect patterns, who wants to understand their own condition better, and who needs a tool that works during a migraine, not just after one. They are often logging in low light, with limited cognitive bandwidth, wanting to do as little as possible to capture what is happening.
 
 What I built
+
 Emi is a progressive web app that lets users log migraines in two modes, track patterns over time, and export a clean PDF summary for their doctor.
 
 Two logging modes with distinct purposes
+
 "Migraine starting now" is designed for the moment the pain hits. One tap to start, a location selector, a severity slider, and a button to mark it as ended. Minimum friction, minimum reading, minimum decisions.
 "Write it up" is for after recovery. A full structured form covering date, time of onset, duration, headache type, pain type, location, severity, triggers, and medication. Every field is optional except date.
+
 A real-time entry is always editable after the fact. When someone recovers, they can return to the entry and expand it with the detail they could not manage during the migraine itself. Entries with missing detail show a clear prompt to complete them.
 
 Medication logging as a data modelling decision
+
 Most migraine tracking tools treat medication as a free text field. The result is that the same drug appears in the data as "Sumatriptan", "sumatriptan 50mg", "Suma", and a dozen other variations. Any pattern analysis built on that data is unreliable.
 I designed a structured medication logging system with a curated list of common migraine medications as the primary input, autocomplete drawing from the user's own logging history, dose recorded as a standardised number with a unit dropdown (mg, mcg, ml, tablet), and time taken recorded per entry. Users can add medications not on the curated list via a clearly labelled free text option.
 This decision was made with future aggregation and analysis in mind. A well-structured medication dataset is the difference between an app that shows you what you took and one that can tell you what works for you. That distinction matters if Emi ever moves beyond a single-user tool.
 
 Insights powered by the Claude API
+
 The insights page surfaces trigger frequency, time of day and day of week patterns, average severity and duration, and monthly frequency. An AI-generated summary reads across the user's entries and surfaces the most relevant observations in plain language, without requiring the user to interpret charts themselves.
 
 Doctor export
+
 A downloadable PDF summarising a selected time range. Total migraines, average severity, average duration, most common triggers, and a structured entry log including medications with dose, unit, and time taken. Built to be handed to a GP or neurologist without explanation.
+
 Profile data
 Users complete a short profile on first sign-in covering age range and gender. Women and non-binary users are also asked whether they want Emi to track cycle-based patterns. If yes, they are prompted to note their cycle phase when logging. This data enriches pattern analysis and lays the groundwork for hormonal correlation insights. Migraines affect women at roughly three times the rate of men, and hormonal triggers are among the most commonly reported. The cycle correlation feature in the insights layer is future scope, but the data architecture supports it from day one.
 
