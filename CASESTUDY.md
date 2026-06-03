@@ -39,17 +39,17 @@ Users complete a short profile on first sign-in covering age range and gender. W
 
 What I deliberately left out
 
-Severity tracking across medication doses. A user taking three escalating doses during a single migraine could theoretically log severity at each point. The data would be clinically interesting. The logging experience would feel like a hospital intake form. A single severity-after-medication field was the right trade-off for the MVP.
+Severity tracking across medication doses: A user taking three escalating doses during a single migraine could theoretically log severity at each point. The data would be clinically interesting. The logging experience would feel like a hospital intake form. A single severity-after-medication field was the right trade-off for the MVP.
 
-Non-medication relief strategies. Rest, hydration, blood sugar management, and similar interventions are real and commonly reported. The logging model is built to accommodate this as a future field without structural changes, but adding it to the MVP would have expanded the form without enough corresponding value at this stage.
+Non-medication relief strategies: Rest, hydration, blood sugar management, and similar interventions are real and commonly reported. The logging model is built to accommodate this as a future field without structural changes, but adding it to the MVP would have expanded the form without enough corresponding value at this stage.
 
-Migration from existing tracking systems. Many chronic migraine sufferers already have an established tracking history, often in a personal spreadsheet. The inability to import that history is a real adoption barrier. Mapping arbitrary spreadsheet structures to a standardised data model is a meaningful technical challenge and was out of scope for the MVP, but it is one of the first things worth solving if Emi moves toward wider use.
+Migration from existing tracking systems: Many chronic migraine sufferers already have an established tracking history, often in a personal spreadsheet. The inability to import that history is a real adoption barrier. Mapping arbitrary spreadsheet structures to a standardised data model is a meaningful technical challenge and was out of scope for the MVP, but it is one of the first things worth solving if Emi moves toward wider use.
 
-Scope beyond migraines. Emi does not try to solve headaches broadly, or chronic pain generally, or neurological conditions adjacent to migraine. This decision was made at the outset but its wisdom became clearer the deeper the build went. Migraines alone were hard enough to do well.
+Scope beyond migraines: Emi does not try to solve headaches broadly, or chronic pain generally, or neurological conditions adjacent to migraine. This decision was made at the outset but its wisdom became clearer the deeper the build went. Migraines alone were hard enough to do well.
 
-A healthcare professional view. The structured data model is designed to support a future professional-facing dashboard, but this was deliberately out of scope. The PDF export serves that relationship for now.
+A healthcare professional view: The structured data model is designed to support a future professional-facing dashboard, but this was deliberately out of scope. The PDF export serves that relationship for now.
 
-An administrator or research view. Aggregating data across users for population-level insights is a genuinely interesting product direction, and one with real market potential given how fragmented migraine data currently is. It is a separate product, not a feature, and building it before the consumer layer was solid would have been the wrong order.
+An administrator or research view: Aggregating data across users for population-level insights is a genuinely interesting product direction, and one with real market potential given how fragmented migraine data currently is. It is a separate product, not a feature, and building it before the consumer layer was solid would have been the wrong order.
 
 What comes next
 
